@@ -94,7 +94,17 @@ img {
 .link.studio {
   color: var(--blue-color);  
 }
+/* .link.studio:active::after {
+  display: block;
+  content: '';
 
+  color: var(--blue-color);
+  width: 48px;
+  height: 4px;
+  text-decoration: underline;
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+} */
 .link:hover,
 .link:focus{
   color: var(--blue-color);
@@ -148,8 +158,53 @@ margin-right: 50px;
   color: var(--blue-color);
 }
 
-/*Герой*/
+/* Модальное окно */
 
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--white-color); 
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.button-close{
+  display: flex;
+  
+  margin-left: auto;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-color: var(--white-color);
+  cursor: pointer;
+}
+.icon-close-black{
+  fill: #000000;
+ 
+  
+}
+/*Герой*/
 .hero {  
   padding-top: 200px;
   padding-bottom: 200px;
@@ -298,23 +353,43 @@ margin-right: 50px;
 .project-cards-item:not(:last-child){
   margin-right: 30px;    
 }
-/* .img-project-cards{
+/* .project-cards-item{
+  position: relative;
+} */
+/* .img-thumb-subject{
   
 } */
 .project-cards-thumb{
   position: relative;
-  /* width: 370px;
-  height: 70px; */
-
+  
 }
-.project-cards-subject{
+.project-cards-thumb::before{
+  display: inline-block;
   position: absolute;
-  bottom: 0;  
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(255, 255, 0 0.5);
   /* background-image: linear-gradient(to top, rgba(47, 48, 58, 0.8),
-    rgba(47, 48, 58, 0.8); */
+  rgba(47, 48, 58, 0.8); */
+}
+.thumb-subject{
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    transform: translate(-5% -25%);
+    /* margin: 0 auto; */
+}
+
+.project-thumb-subject{
+
+  color: var(--white-color);
+  /* margin: 0;
+  text-align: center; */
+  text-transform: uppercase;
+  /*  */
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
