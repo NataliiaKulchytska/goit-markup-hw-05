@@ -92,19 +92,20 @@ img {
 }
 
 .link.studio {
+  position: relative;
   color: var(--blue-color);  
 }
-/* .link.studio:active::after {
-  display: block;
+.link.studio::after {
   content: '';
-
-  color: var(--blue-color);
-  width: 48px;
-  height: 4px;
-  text-decoration: underline;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;  
+   
+  border: 2px solid var(--blue-color);
   border-radius: 2px;
-  transition: width 0.4s ease-in-out;
-} */
+  background-color: var(--blue-color);
+}
 .link:hover,
 .link:focus{
   color: var(--blue-color);
@@ -616,9 +617,22 @@ margin-right: 50px;
 /*Портфолио*/
 
 .link.portfolio {
+  position: relative;
   color: var(--blue-color);
 }
+ 
 
+.link.portfolio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  border: 2px solid var(--blue-color);
+  border-radius: 2px;
+  background-color: var(--blue-color);
+}
 /* Кнопки в портфолио*/
 
 .portfolio-button-list{
