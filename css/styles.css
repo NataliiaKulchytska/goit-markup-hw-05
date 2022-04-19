@@ -89,6 +89,10 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em; 
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.studio {
@@ -127,7 +131,6 @@ margin-right: 50px;
   list-style: none;
 }
 
-
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -144,11 +147,14 @@ margin-right: 50px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .contact-icon-mail, 
-.contact-icon-tel {
-  
+.contact-icon-tel {  
   margin-right: 10px;  
   fill: currentColor;
 }
@@ -211,6 +217,10 @@ margin-right: 50px;
   line-height: 1.88;
   cursor: pointer;
   letter-spacing: 0.06em; 
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .hero-button:hover,
@@ -316,8 +326,7 @@ margin-right: 50px;
   position: relative;
   
 }
-.thumb-subject::before{
-  
+.thumb-subject::before{  
   position: absolute;
   content: '';
   bottom: 0;
@@ -408,9 +417,12 @@ margin-right: 50px;
   justify-content: center;
   align-items: center;
   width: 44px;
-  height: 44px;
-  
+  height: 44px;  
   border-radius:50%;  
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .command-link:focus, 
@@ -418,14 +430,18 @@ margin-right: 50px;
   background-color: var(--blue-color);
 
 }
+.icon-social-link {
+  fill: var(--color-icon-command);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .command-link:focus .icon-social-link,
 .command-link:hover .icon-social-link{
   fill: var(--white-color);
 }
 
-.icon-social-link {  
-  fill: var(--color-icon-command); 
-}
 
 /* Клиенты */
 
@@ -446,13 +462,20 @@ margin-right: 50px;
   justify-content: center;
   align-items: center;
   width: 170px;
-  height: 92px;
-  
+  height: 92px;  
   border: 1px solid var(--color-icon-command);
   border-radius: 4px;
+
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-logo {
   fill: var(--color-icon-command);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus{
@@ -510,11 +533,16 @@ margin-right: 50px;
   color: var(--white-color);
   font-size: 14px;
   line-height: 1.71;
-  text-decoration: none;  
+  text-decoration: none; 
+
 }
 
 .address-link {
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -549,10 +577,14 @@ margin-right: 50px;
   justify-content: center;
   align-items: center;
   width: 44px;
-  height: 44px;
-  
+  height: 44px;  
   border-radius:50%;
+
   background-color: rgba(255, 255, 255, 0.1);
+  
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-social-icon{  
   fill: var(--white-color);
@@ -667,6 +699,10 @@ margin-right: 50px;
   line-height: 1.63;
 
   cursor: pointer; 
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button.one {
@@ -725,6 +761,10 @@ margin-right: 50px;
 .portfolio-project-link{
   display: block;
   text-decoration: none;  
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-project-link:hover,
 .portfolio-project-link:focus {  
