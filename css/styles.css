@@ -242,7 +242,7 @@ img {
   cursor: pointer;
   letter-spacing: 0.06em; 
 
-  transition-property: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
  
   }
 
@@ -648,6 +648,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
+  
   transition: opacity 250ms var(--timing-function);
 }
 
@@ -846,15 +847,18 @@ img {
   color: var(--white-color);
 
   opacity: 0;
+  visibility: hidden;
   transform: translatey(100%);
   transition: transform 250ms var(--timing-function), 
   background-color 250ms var(--timing-function),
-  opacity 250ms var(--timing-function);
+  opacity 250ms var(--timing-function),
+  visibility 250ms var(--timing-function);
  }
 .portfolio-project-link:hover .portfolio-text-hover {
   transform: translatey(0);
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 1;
+  visibility: visible;
 }
 
 .portfolio-project-text {
