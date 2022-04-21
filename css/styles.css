@@ -349,9 +349,8 @@ img {
   position: relative;
   
 }
-.thumb-subject::before{  
-  position: absolute;
-  content: '';
+.thumb-subject{  
+  position: absolute;  
   bottom: 0;
   left: 0;
   width: 370px;
@@ -442,7 +441,7 @@ img {
   height: 44px;  
   border-radius:50%;  
 
-  transition: background-color 205ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
  
  }
 
@@ -647,8 +646,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  opacity: 1;
-  
+  opacity: 1;  
   transition: opacity 250ms var(--timing-function);
 }
 
@@ -658,13 +656,14 @@ img {
   visibility: hidden;
 }
 .backdrop.is-hidden .modal{
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1); 
+  
 }
+
 .modal {
   position: absolute;
   top: 50%;
-  left: 50%;
-  
+  left: 50%;  
 
   min-width: 528px;
   min-height: 581px;
@@ -674,6 +673,7 @@ img {
   border-radius: 4px;
 
   background-color: var(--white-color);
+  
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
 }
@@ -692,9 +692,8 @@ img {
 
   background-color: var(--white-color);
   
-  cursor: pointer;
-}
-
+  cursor: pointer;  
+  }
 
 /*Портфолио*/
 
