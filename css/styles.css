@@ -119,9 +119,6 @@ img {
 }
 
 
-
-
-
 /*Контакты*/
 
 .contact-list {  
@@ -647,7 +644,8 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;  
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), 
+  visibility 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -678,7 +676,7 @@ img {
   transition: transform 250ms var(--timing-function);
 }
 
-.button-close {
+.button-close { 
   display: flex;
   align-items: center;
   margin-left: auto;
